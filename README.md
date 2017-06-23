@@ -117,6 +117,8 @@ The batch preprocessor is called as a drush script (see `drush help islandora_co
 
 `drush -v --user=admin islandora_compound_batch_preprocess --target=/path/to/input/directory --namespace=mynamespace --parent=mynamespace:collection`
 
+* note that in Drush 7+, the `--target` flag became reserved, so instead use `--scan_target=/path/to/input/directory`, as was done in [Islandora Batch](https://github.com/Islandora/islandora_batch/pull/79).
+
 This will populate the queue (stored in the Drupal database) with base entries.
 
 The queue of preprocessed items is then processed by running the ingest command:
